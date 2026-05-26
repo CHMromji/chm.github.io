@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHM - Home</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fafafa;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .intro-wrapper {
+            font-size: 36px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 50px;
+        }
+
+        /* Spinning Word Card */
+        .spinner-container {
+            height: 50px;
+            overflow: hidden;
+            background-color: #fff;
+            color: #333;
+            border: 2px solid #333;
+            border-radius: 6px;
+            padding: 0 20px;
+            box-shadow: 2px 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .spinner-words {
+            display: flex;
+            flex-direction: column;
+            /* 4 words = 4 steps. Adjust timing as needed */
+            animation: spin 8s infinite cubic-bezier(0.1, 0.7, 0.1, 1);
+        }
+
+        .word {
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 28px;
+            letter-spacing: 1px;
+        }
+
+        /* Keyframes for sliding up */
+        @keyframes spin {
+            0%, 15% { transform: translateY(0); }
+            25%, 40% { transform: translateY(-50px); }
+            50%, 65% { transform: translateY(-100px); }
+            75%, 90% { transform: translateY(-150px); }
+            100% { transform: translateY(0); }
+        }
+
+        /* Navigation Button */
+        .enter-btn {
+            padding: 12px 30px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #333;
+            border-radius: 25px;
+            font-size: 16px;
+            transition: background-color 0.2s, transform 0.1s;
+        }
+
+        .enter-btn:hover {
+            background-color: #555;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="intro-wrapper">
+        <span>I am a</span>
+        <div class="spinner-container">
+            <div class="spinner-words">
+                <span class="word">Taiwanese</span>
+                <span class="word">Marketer</span>
+                <span class="word">Movie-goer</span>
+                <span class="word">Creative</span>
+                <span class="word">Taiwanese</span> <!-- Duplicate for seamless animation loop -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to the main gallery/profile page you created earlier -->
+    <a href="profile.html" class="enter-btn">Enter Portfolio</a>
+
+</body>
+</html>
